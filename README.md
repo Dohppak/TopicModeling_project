@@ -1,7 +1,36 @@
 # Interview data analysis for UX  ver 1.0
 
 Interview data analysis for UX
-Interview data from 
+Interview data from CDE70801: Contextual Design, User research course for Quantitative data analysis project
+
+## Research Goal
+- Define characteristic about pre-entrepreneur
+- Define relationship between problems and their behavior
+- Define support condition and tool
+- Compare text data analysis method between Topic modeling
+and UX analysis method (Affinity diagram, ground theroy)
+
+## Research Question
+- Understand characteristic about pre-entrepreneur • Understand communication pattern
+- Understand conflict pattern
+- Understand IT technology use for communication
+
+## Method
+- Semi-structured interview
+- Contextual inquiry
+
+## Data description
+- 16 Documents (Sample number!)
+- 1732 Sentences (unit!)
+- Each file is consisted of two columns: `id`, `document`
+    - `id`: Interviewer and Interviewee
+    - `document`: Contents
+
+## Characteristics
+- Interview data : Question and answer format, Question's sementic meaning is same.
+- Semi-structured : Open answer, so unexpected topic can exist.
+- Doc-Sentence-Word : 3 depth format
+
 
 ## Process
 
@@ -19,19 +48,6 @@ Interview data from
 - Word Embedding : 문장속의 단어간의 관계를 비지도 학습 방식으로 분석하여 만들어지는 수십~ 수백차원의 벡터로서 특징(Feature)화 되는 단어들을 만들어 냅니다. 단어가 가지고있는 벡터간의 연산을 통해 다른 단어와의 관계를 만들어내게 됩니다
 - Doc2Vec(dbow+w,d300,n10,hs,w8,mc5,s0.001,t4) : DBOW 방식,Window 8, vector : 300, learning-rate : 0.025, min_count : 5, Multi CPU, Hierachical softmax, megative sampling)
 
-
-## Data description
-
-- 16 Documents (Sample number!)
-- 1732 Sentences (unit!)
-- Each file is consisted of two columns: `id`, `document`
-    - `id`: Interviewer and Interviewee
-    - `document`: Contents
-
-## Characteristics
-- Interview data : Question and answer format, Question's sementic meaning is same.
-- Semi-structured : Open answer, so unexpected topic can exist.
-- Doc-Sentence-Word : 3 depth format
 
 
 ## Quick peek
@@ -53,22 +69,13 @@ Interview data from
 
 ## Using
 
-> from importlib import reload
-<br/>
-> import sys
-<br/>
-> import gensim
-<br/>
-> from gensim.models import doc2vec
-<br/>
-> from gensim.models.doc2vec import TaggedDocument
-<br/>
-> from collections import namedtuple
-<br/>
-> import pandas as pd
-<br/>
-> import smart_open
-<br/>
-> import random
-<br/>
-> import chardet
+- from importlib import reload
+- import sys
+- import gensim
+- from gensim.models import doc2vec
+- from gensim.models.doc2vec import TaggedDocument
+- from collections import namedtuple
+- import pandas as pd
+- import smart_open
+- import random
+- import chardet
