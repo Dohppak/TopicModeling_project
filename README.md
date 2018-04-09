@@ -6,19 +6,18 @@ Interview data from
 ## Process
 
 1. 데이터 전처리 과정
-     - train_data : 인터뷰 text 데이터 불러오기
-     - train_docs : 형태소 분석을 통한 POS 태깅
-     - remove_item : Conjunction,Deteriner,Exclamation,Josa,Punctuation,Suffix
-     - trained_docs_list : 불용어 제거한 데이터 셋, wjscp
-     - text : 토크나이즈 진행
+- train_data : 인터뷰 text 데이터 불러오기
+- train_docs : 형태소 분석을 통한 POS 태깅
+- remove_item : Conjunction,Deteriner,Exclamation,Josa,Punctuation,Suffix
+- trained_docs_list : 불용어 제거한 데이터 셋
+- text : 토크나이즈 진행
   
 2. 데이터 분석 과정
-    - doc2vec 에서 요구하는 전처리를 한번 더해준다
-    - 사전구축하고, vector들을 트레이닝시킨다.
-    - Topic Modeling : 어떤 문서에서 자주 나타는 단어를 통해, 주제를 찾아주는 확률적인 모델을 디자인합니다.유명한 것으로 LDA, LSI, HDP가 있습니다.
-    - Word Embedding : 문장속의 단어간의 관계를 비지도 학습 방식으로 분석하여 만들어지는 수십~ 수백차원의 벡터로서 특징(Feature)화 되는 단어들을 만들어 냅니다. 단어가 가지고있는 벡터간의 연산을 통해 다른 단어와의 관계를 만들어내게 됩니다
-    - Doc2Vec(dbow+w,d300,n10,hs,w8,mc5,s0.001,t4) : DBOW 방식,
-     Window 8, vector : 300, learning-rate : 0.025, min_count : 5, Multi CPU, Hierachical softmax, megative sampling)
+- doc2vec 에서 요구하는 전처리를 한번 더해준다
+- 사전구축하고, vector들을 트레이닝시킨다.
+- Topic Modeling : 어떤 문서에서 자주 나타는 단어를 통해, 주제를 찾아주는 확률적인 모델을 디자인합니다.유명한 것으로 LDA, LSI, HDP가 있습니다.
+- Word Embedding : 문장속의 단어간의 관계를 비지도 학습 방식으로 분석하여 만들어지는 수십~ 수백차원의 벡터로서 특징(Feature)화 되는 단어들을 만들어 냅니다. 단어가 가지고있는 벡터간의 연산을 통해 다른 단어와의 관계를 만들어내게 됩니다
+- Doc2Vec(dbow+w,d300,n10,hs,w8,mc5,s0.001,t4) : DBOW 방식,Window 8, vector : 300, learning-rate : 0.025, min_count : 5, Multi CPU, Hierachical softmax, megative sampling)
 
 
 ## Data description
@@ -55,12 +54,21 @@ Interview data from
 ## Using
 
 > from importlib import reload
+<br/>
 > import sys
+<br/>
 > import gensim
+<br/>
 > from gensim.models import doc2vec
+<br/>
 > from gensim.models.doc2vec import TaggedDocument
+<br/>
 > from collections import namedtuple
+<br/>
 > import pandas as pd
+<br/>
 > import smart_open
+<br/>
 > import random
+<br/>
 > import chardet
