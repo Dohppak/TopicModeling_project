@@ -1,7 +1,7 @@
 # Interview data analysis for UX  ver 1.0
 
-Interview data analysis for UX
-Interview data from CDE70801: Contextual Design, User research course for Quantitative data analysis project
+- Interview data analysis for UX
+> Interview data from CDE70801: Contextual Design, User research course for Quantitative data analysis project
 
 ## Research Goal
 - Define characteristic about pre-entrepreneur
